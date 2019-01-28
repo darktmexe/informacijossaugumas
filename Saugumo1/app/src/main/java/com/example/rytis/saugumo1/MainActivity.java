@@ -191,6 +191,15 @@ public class MainActivity extends AppCompatActivity {
         cipherText.setText(output);
         decoded.setText(output);
     }
+    
+    public String computeCipher(String input) {
+        if (radioGroup.getCheckedRadioButtonId() == R.id.radioButton) {
+            return computeRotationCipher(rotationPicker.getValue(), input);
+        } else if (radioGroup.getCheckedRadioButtonId() == R.id.radioButton2) {
+            return computeRotationCipherdecode(rotationPicker.getValue(), input);
+        }
+        return "";
+    }
 
     public static String computeRotationCipherdecode(int offset, String enc) {
         return computeRotationCipher(26-offset, enc);
