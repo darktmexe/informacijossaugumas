@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Caesar Cipher"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal"
+            android:textSize="32dp"
+            android:layout_marginTop="5dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:weightSum="1"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:layout_weight="33">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroup"
+                android:layout_gravity="center_vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Encrypt"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="decrypt"
+                    android:textSize="18dp" />
+
+            </RadioGroup>
+
+            <Space
+                android:layout_width="94dp"
+                android:layout_height="match_parent" />
+
+            <NumberPicker
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/numberPicker"
+                android:orientation="vertical"
+                android:baselineAligned="false"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical|right" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="147dp"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            android:id="@+id/button"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:layout_weight="33"
+            android:hint="Enter message here"
+            android:singleLine="false"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/deocoded"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:hint="message will appear here" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_weight="33"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:hint="message will appear here"
+            android:padding="12dp"
+            android:textAlignment="gravity"
+            android:textIsSelectable="true"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
